@@ -12,7 +12,7 @@
 
 ExampleSubsystem* Robot::m_subsystem;
 OI* Robot::m_oi;
-
+DriveTrain* Robot::drive;
 
 void Robot::RobotInit() {
 	m_chooser.AddDefault("Default Auto", &m_defaultAuto);
@@ -29,6 +29,7 @@ void Robot::DisabledInit()
 {
 	m_subsystem = new ExampleSubsystem();
 	m_oi = new OI();
+	drive = new DriveTrain();
 }
 
 void Robot::DisabledPeriodic() {
